@@ -1,0 +1,51 @@
+:root {
+	--background-color: #111;
+	--graph-background: #222;
+	--graph-green: green;
+}
+
+body {
+	margin: 0;
+}
+
+main {
+	display: flex;
+
+	width: 100vw;
+	height: 100vh;
+
+	background-color: var(--background-color);
+	margin: 0;
+}
+
+main > * {
+	flex: 1
+}
+
+#cpu-graph {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 100%;
+	/* padding: 0 10px; */
+}
+
+#ram-graph {
+	height: 100%;
+}
+
+#right-side-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+#clock {
+	color: white;
+	font-size: 15vw;
+	font-family: 'Jost';
+	text-align: center;
+}
+
+.bar-graph-wrapper {
+	height: 20%;
+}
