@@ -40,6 +40,12 @@ const updateClock = async () => {
 	requestAnimationFrame(updateClock);
 }
 
+document.addEventListener('click', () => {
+	document.body.requestFullscreen({
+		'navigationUI': 'hide',
+	});
+});
+
 updateCPU();
 updateRAM();
 updateClock();
