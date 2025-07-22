@@ -5,7 +5,7 @@ Hastily made system monitor that can be displayed on your phone
 
 1. Clone this repository
 ```
-git clone https://github.com/rfblock/navs-stupid-monitor.git
+git clone https://github.com/rfblock/navs-stupid-monitor.git;
 cd navs-stupid-monitor
 ```
 

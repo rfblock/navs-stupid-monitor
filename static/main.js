@@ -7,7 +7,19 @@ const updateCPU = async () => {
 	const cpuUsage = data.cpu_usage_per_core;
 	const cpuCount = data.total_cores;
 
-	const cpuBars = document.querySelectorAll('.bar-graph-wrapper');
+	let cpuBars = document.querySelectorAll('.bar-graph-wrapper');
+
+	if (cpuBars.length < cpuCount) {
+		const cpuGraphNode = document.querySelector('#cpu-graph');
+		for (let i = 0; i < cpuCount - cpuBars.length; i++) {
+			const node = document.createElement('div');
+			node.classList.add('bar-graph-wrapper');
+			cpuGraphNode.appendChild(node);
+		}
+
+		cpuBars = document.querySelectorAll('.bar-graph-wrapper');
+	}
+
 	for (let i = 0; i < cpuCount; i++) {
 		const cpuBar = cpuBars[i];
 		const usage = cpuUsage[i];
